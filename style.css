@@ -1,1 +1,21 @@
 @charset "UTF-8";
+
+header figure img{
+  height: 500px;
+  display: block;
+  margin: auto;
+}
+
+header h1#title {
+  display: none;
+}
+
+section#tribute-info {
+  height: 500px;
+  background-image:
+    radial-gradient(
+      #9dc660,
+      #38A646
+    );
+    transform: skewY(-5deg);
+}
