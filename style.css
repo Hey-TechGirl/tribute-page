@@ -1,7 +1,15 @@
 @charset "UTF-8";
 
+html {
+    min-height: 100%;
+    overflow-y: scroll;
+}
+
 body {
+  margin: 0;
   font-family: 'Open Sans', Arial, sans-serif;
+  padding-bottom: 10px;
+  min-height: 100%;
 }
 
 header {
@@ -26,7 +34,7 @@ header h1#title {
   display: none;
 }
 
-nav#menu-nav ul {
+nav.topnav ul {
   position: absolute;
   list-style: none;
   text-transform: uppercase;
@@ -36,7 +44,7 @@ nav#menu-nav ul {
   right: 35px;
 }
 
-nav#menu-nav li {
+nav.topnav li {
   display: inline-block;
   margin: 0px;
   -webkit-transition: background-color 1s;
@@ -44,11 +52,11 @@ nav#menu-nav li {
   transition: background-color 1s;
 }
 
-nav#menu-nav h2 {
+nav.topnav h2 {
   display: none;
 }
 
-nav#menu-nav a {
+nav.topnav a {
   color: #30a953;
   border: 3px solid #30a953;
   padding: 10px;
@@ -57,7 +65,7 @@ nav#menu-nav a {
   cursor: pointer;
 }
 
-nav#menu-nav a:hover {
+nav.topnav a:hover {
   color: white;
   background-color: #30a953;
   border: 3px solid #30a953;
@@ -85,9 +93,9 @@ section#tribute-info img{
 }
 
 section#tribute-info blockquote {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 20px;
-  color: black;
+  color: white;
   text-align: center;
   transform: skewY(7deg);
   line-height: 2.2;
@@ -131,6 +139,13 @@ section#time-line li {
   height: 250px;
   width: 250px;
   margin: 5px;
+}
+
+section#time-line li:hover {
+  transform: scale(1.8);
+  border: 10px solid white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 section#time-line li#square-01 {
@@ -218,10 +233,8 @@ section#time-line li#square-12 {
 }
 
 section#info {
-  height: 500px;
+  height: 400px;
   padding: 100px 480px 100px 150px;
-  font-size: 20px;
-  height: 500px;
   background-image:
     radial-gradient(
       #9dc660,
@@ -238,9 +251,215 @@ section#info img {
   transform: skewY(-7deg);
 }
 
-section#info p {
-  text-align: justify;
+section#info div#column{
+  padding-top: 35px;
+  font-size: 17px;
+  column-count: 3;
   transform: skewY(-7deg);
   line-height: 1.5;
   letter-spacing: 0.2px;
+}
+
+section#info div#column p {
+  margin: 0px;
+}
+
+section#info p#learn-more{
+  font-size: 14px;
+  text-align: center;
+  transform: skewY(-7deg);
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+section#info p#learn-more a{
+  text-decoration: none;
+  color: white;
+}
+
+footer#contact {
+  height: 350px;
+}
+
+footer#contact p#made-by{
+  padding: 10px 0px;
+  margin: 0px;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: grey;
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+footer#contact p#last-quote {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  line-height: 2.2;
+  padding: 60px 550px 100px 50px;
+  letter-spacing: 0.5px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+footer#contact img {
+  width: 150px;
+  vertical-align: middle;
+}
+
+@media (max-width: 560px) {
+  #menu-nav {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  #menu-nav ul {
+    top: 5px;
+  }
+  #menu-nav li {
+    width: 80px;
+    height: 5px;
+    padding: 5px;
+  }
+  #menu-nav a {
+    border: 0px solid white;
+  }
+  #menu-nav a:hover {
+    color: white;
+    background-color: #30a953;
+    border-radius: 0px;
+    padding: 5px;
+  }
+  header {
+    height: 450px;
+  }
+  header figure {
+    margin: 0px;
+  }
+  header figure img#image{
+    width: 400px;
+    height: auto;
+    display: block;
+    margin-left: 30px;
+    padding-top: 150px;
+  }
+  header figure img#grinch-01{
+    height: 200px;
+    top: 180px;
+    right: 0px;
+  }
+  section#tribute-info img{
+    height: 350px;
+    top: 230px;
+    left: -70px;
+  }
+  section#tribute-info blockquote {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 50px 0px 80px 0px;
+    margin: 0px;
+  }
+  section#info {
+    height: 500px;
+    padding: 10px 20px 10px 20px;
+  }
+  section#info img {
+    height: 400px;
+    top: 410px;
+    right: 10px;
+  }
+  section#info div#column{
+    font-size: 12px;
+    column-count: 2;
+    line-height: 1.8;
+  }
+  section#info p#learn-more{
+    padding: 0px 200px 0px 20px;
+  }
+  footer#contact {
+    height: 350px;
+  }
+  footer#contact p#made-by{
+    padding: 5px 0px;
+    font-size: 10px;
+  }
+  footer#contact p#last-quote {
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 50px 220px 80px 30px;
+  }
+  footer#contact img {
+    width: 100px;
+    vertical-align: middle;
+  }
+}
+
+@media (max-width: 850px) {
+  header {
+    height: 550px;
+  }
+  header figure {
+    margin: 0px;
+  }
+  header figure img#image{
+    width: 550px;
+    height: auto;
+    display: block;
+    padding-top: 150px;
+    margin-left: 75px;
+  }
+  header figure img#grinch-01{
+    height: 350px;
+    top: 120px;
+  }
+  section#tribute-info img{
+    height: 450px;
+    top: 0px;
+    left: -50px;
+  }
+  section#tribute-info blockquote {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 80px 0px 80px 120px;
+  }
+  section#info {
+    height: 450px;
+    padding: 40px;
+  }
+  section#info img {
+    height: 600px;
+    top: 340px;
+    right: 10px;
+  }
+  section#info div#column{
+    font-size: 14px;
+    column-count: 2;
+    line-height: 1.8;
+  }
+  section#info p#learn-more{
+    font-size: 16px;
+    padding: 0px 300px 0px 20px;
+  }
+  footer#contact {
+    height: 400px;
+  }
+  footer#contact p#made-by{
+    padding: 5px 0px;
+    font-size: 10px;
+  }
+  footer#contact p#last-quote {
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 110px 235px 220px 15px;
+    letter-spacing: 0px;
+  }
+  footer#contact img {
+    width: 125px;
+    vertical-align: middle;
+  }
 }
