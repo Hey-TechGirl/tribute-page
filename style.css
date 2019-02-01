@@ -463,3 +463,40 @@ footer#contact img {
     vertical-align: middle;
   }
 }
+
+@media (max-width: 1300px) {
+  section#info {
+    height: 400px;
+    padding: 40px;
+  }
+  section#info img {
+    height: 600px;
+    top: 340px;
+    right: 10px;
+  }
+  section#info div#column{
+    font-size: 14px;
+    column-count: 3;
+    line-height: 1.8;
+  }
+  section#info p#learn-more{
+    font-size: 16px;
+    padding: 0px 300px 0px 20px;
+  }
+  footer#contact {
+    height: 400px;
+  }
+  footer#contact p#made-by{
+    padding: 5px 0px;
+    font-size: 10px;
+  }
+  footer#contact p#last-quote {
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 110px 235px 220px 15px;
+    letter-spacing: 0px;
+  }
+  footer#contact img {
+    width: 125px;
+    vertical-align: middle;
+  }
